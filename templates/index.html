@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} My Online Game Shop {% endblock %}
+
+{% block main %}
+
+<div class="container">
+    {% for item in data %}
+    <div class="items">
+        <form action="{{ url_for('create_checkout_session', price_id=item.default_price) }}" method="POST" class="add_form">
+            <h3>{{item['name']}}</h3>
+            <img src="{{item['images'][0]}}" alt="">
+            <input type="submit"  value="Buy" class="submit">
+            
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

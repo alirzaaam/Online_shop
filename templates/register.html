@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block header %}
+
+<div class="login_container">
+    <div class="title">
+        <h2>Register Form </h2>
+    </div>
+    <div class="form">
+        <form action="/register" method="POST" class="login_form">
+            <input type="text" name="email" id="" placeholder="Email Address" class="inputs">
+            <input type="text" name="username" id="" placeholder="Username" class="inputs">
+            <input type="password" name="pass" id="" placeholder="Password" class="inputs">
+            <input type="password" name="repass" id="" placeholder=" Re-Enter Password" class="inputs">
+            <input type="submit" value="Register" class="submit">
+        </form>
+    </div>
+    <!-- <div class="sign_link">
+        <a href="">Create an Account</a>
+    </div> -->
+    
+</div>
+{% endblock %}
